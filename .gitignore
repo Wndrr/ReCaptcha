@@ -1,0 +1,10 @@
+packages/
+.vs/
+*.user
+obj/
+bin/
+
+FoyerRural/locale/
+
+node_modules
+bower_components
