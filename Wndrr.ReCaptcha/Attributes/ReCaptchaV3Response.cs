@@ -3,7 +3,7 @@ using System.Globalization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace RelaxationPortal.Attributes
+namespace Wndrr.ReCaptcha.Attributes
 {
     public partial class ReCaptchaV3Response
     {

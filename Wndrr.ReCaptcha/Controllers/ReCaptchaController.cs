@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RelaxationPortal.Attributes;
-using RelaxationPortal.TagHelpers;
+using Wndrr.ReCaptcha.Attributes;
+using Wndrr.ReCaptcha.TagHelpers;
 
-namespace RelaxationPortal.Controllers
+namespace Wndrr.ReCaptcha.Controllers
 {
     public class ReCaptchaController : Controller
     {

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace RelaxationPortal.Attributes
+namespace Wndrr.ReCaptcha.Attributes
 {
     public class ReCaptchaAttribute : ActionFilterAttribute
     {

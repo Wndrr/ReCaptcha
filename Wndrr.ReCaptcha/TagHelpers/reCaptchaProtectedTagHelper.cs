@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace RelaxationPortal.TagHelpers
+namespace Wndrr.ReCaptcha.TagHelpers
 {
     [HtmlTargetElement(Attributes = "captcha")]
 
@@ -28,6 +27,7 @@ namespace RelaxationPortal.TagHelpers
 
             output.Content.Clear();
             output.Content.AppendHtml($@"
+<script src='https://www.google.com/recaptcha/api.js?render=6LeIoIUUAAAAAEAkT_rE9ub8rxlMSsx5_mU_mD0B'></script>
 <form id='{jsFriendlyGuid}' action='/GetRecaptchaCachedValue' )>
     <input type='hidden' value='{guid}' name='reCaptchaCacheGuid'/>
     <input type='hidden' name='reCaptchaToken'/>
