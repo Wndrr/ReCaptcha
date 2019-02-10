@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Razor.TagHelpers;
 namespace Wndrr.ReCaptcha.TagHelpers
 {
     [HtmlTargetElement(Attributes = "captcha")]
-
     public class ReCaptchaProtectedTagHelper : TagHelper
     {
         public bool Captcha { get; set; }
@@ -14,6 +13,9 @@ namespace Wndrr.ReCaptcha.TagHelpers
         public CaptchaTriggerType TriggerType { get; set; } = CaptchaTriggerType.Button;
         [HtmlAttributeName("captcha-value")]
         public string Value { get; set; }
+
+        [HtmlAttributeName("class")]
+        public string Classes { get; set; } = "btn btn-outline-info m-auto";
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
@@ -32,7 +34,7 @@ namespace Wndrr.ReCaptcha.TagHelpers
     <input type='hidden' value='{guid}' name='reCaptchaCacheGuid'/>
     <input type='hidden' name='reCaptchaToken'/>
 </form>
-<span class='btn btn-outline-info m-auto' onclick='reCaptcha_{jsFriendlyGuid}(event)'>
+<span class='{Classes}' onclick='reCaptcha_{jsFriendlyGuid}(event)'>
 {Value}
 </span>
 <script>

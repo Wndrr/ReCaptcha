@@ -1,0 +1,1 @@
+dotnet nuget push .\Wndrr.ReCaptcha\bin\Debug\Wndrr.ReCaptcha.1.0.0.nupkg -k oy2gftvurrmxcblpr6xqelyzrspkyczenm3vpyvtfkrv2i -s https://api.nuget.org/v3/index.json
