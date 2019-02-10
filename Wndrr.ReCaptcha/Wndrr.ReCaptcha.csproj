@@ -4,10 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <AssemblyName>Wndrr.ReCaptcha</AssemblyName>
     <RootNamespace>Wndrr.ReCaptcha</RootNamespace>
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.2.1.0</AssemblyVersion>
+    <FileVersion>1.2.1.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

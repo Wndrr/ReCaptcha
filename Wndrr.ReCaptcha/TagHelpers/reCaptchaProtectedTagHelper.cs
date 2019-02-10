@@ -14,7 +14,7 @@ namespace Wndrr.ReCaptcha.TagHelpers
         [HtmlAttributeName("captcha-value")]
         public string Value { get; set; }
 
-        [HtmlAttributeName("class")]
+        [HtmlAttributeName("placeholder-class")]
         public string Classes { get; set; } = "btn btn-outline-info m-auto";
 
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
