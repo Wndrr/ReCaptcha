@@ -10,7 +10,7 @@ namespace Wndrr.ReCaptcha.TagHelpers
     {
         public bool Captcha { get; set; }
         [HtmlAttributeName("captcha-trigger-type")]
-        public CaptchaTriggerType TriggerType { get; set; } = CaptchaTriggerType.Button;
+        public CaptchaTriggerType TriggerType { get; set; } = CaptchaTriggerType.Auto;
         [HtmlAttributeName("captcha-value")]
         public string Value { get; set; }
 
@@ -63,12 +63,24 @@ namespace Wndrr.ReCaptcha.TagHelpers
 </script>
 
 ");
+            if (TriggerType == CaptchaTriggerType.Auto)
+            {
+                output.Content.AppendHtml($@"
+<script>
+document.addEventListener(""DOMContentLoaded"", function() {{
+    reCaptcha_{jsFriendlyGuid}();
+}});
+</script>
+");
+            }
+
         }
     }
 
     public enum CaptchaTriggerType
     {
-        Button
+        Button,
+        Auto
     }
 
     public static class ReCaptchaContentCache
